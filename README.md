@@ -14,6 +14,8 @@
 This is a `Local Push` integration for Philips airpurifiers.
 Currently only encrypted-CoAP is implemented.
 
+Forked from : https://github.com/kongo09/philips-airpurifier-coap
+
 
 ## Word of Caution
 
