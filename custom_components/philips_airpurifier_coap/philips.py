@@ -504,6 +504,18 @@ class PhilipsAC0850(PhilipsNewGenericCoAPFan):
     }
 
 
+class PhilipsAC0650(PhilipsNewGenericCoAPFan):
+    AVAILABLE_PRESET_MODES = {
+        PRESET_MODE_AUTO: {PHILIPS_NEW_POWER: "ON", PHILIPS_NEW_MODE: "Auto General"},
+        PRESET_MODE_TURBO: {PHILIPS_NEW_POWER: "ON", PHILIPS_NEW_MODE: "Turbo"},
+        PRESET_MODE_SLEEP: {PHILIPS_NEW_POWER: "ON", PHILIPS_NEW_MODE: "Sleep"},
+    }
+    AVAILABLE_SPEEDS = {
+        PRESET_MODE_SLEEP: {PHILIPS_NEW_POWER: "ON", PHILIPS_NEW_MODE: "Sleep"},
+        PRESET_MODE_TURBO: {PHILIPS_NEW_POWER: "ON", PHILIPS_NEW_MODE: "Turbo"},
+    }
+
+
 # the AC1715 seems to be a new class of devices that follows some patterns of its own
 class PhilipsAC1715(PhilipsNewGenericCoAPFan):
     AVAILABLE_PRESET_MODES = {
@@ -921,6 +933,7 @@ class PhilipsAC5659(PhilipsGenericCoAPFan):
 
 
 model_to_class = {
+    MODEL_AC0850: PhilipsAC0650,
     MODEL_AC0850: PhilipsAC0850,
     MODEL_AC1214: PhilipsAC1214,
     MODEL_AC1715: PhilipsAC1715,

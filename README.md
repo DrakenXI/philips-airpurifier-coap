@@ -50,6 +50,7 @@ Note: `configuration.yaml` is no longer supported and your configuration is not 
 
 ## Supported models
 
+- AC0650
 - AC0850
 - AC1214
 - AC1715
